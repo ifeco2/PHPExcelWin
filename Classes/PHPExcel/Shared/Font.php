@@ -340,7 +340,7 @@ class PHPExcel_Shared_Font
     public static function getTextWidthPixelsApprox($columnText, PHPExcel_Style_Font $font = null, $rotation = 0)
     {
         $fontName = $font->getName();
-        $fontSize = $font->getSize();
+        $fontSize = floatval($font->getSize());
 
         // Calculate column width in pixels. We assume fixed glyph width. Result varies with font name and size.
         switch ($fontName) {
