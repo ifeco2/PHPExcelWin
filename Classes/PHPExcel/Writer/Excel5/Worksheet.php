@@ -1206,7 +1206,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
 
         // Use writeRow($row, null, $XF) to set XF format without setting height
         if ($height != null) {
-            $miyRw = $height * 20;  // row height
+            $miyRw = floatval($height) * 20;  // row height
         } else {
             $miyRw = 0xff;          // default row height is 256
         }
